@@ -5,7 +5,7 @@
 
 Means your phone's messaging app is your pi terminal, you can list the directory, run any script, write the notes using echo command etc
 
-![Block Diagram](/Remote_pi/Images/Block_Diagram.png)
+![Block Diagram](/Images/Block_Diagram.png)
 
 ## Hardware and software Component
 
@@ -23,19 +23,19 @@ Means your phone's messaging app is your pi terminal, you can list the directory
  2. Search "BotFather" and go into that chat
  3. Write "/start" command in chat, it will give you list of commands that this bot support
 
- ![start](/Remote_pi/Images/start_new_bot.jpg)
+ ![start](/Images/start_new_bot.jpg)
 
  4. After this write "/newbot" for creating your new bot
 
- ![create](/Remote_pi/Images/create_new_bot.jpg) 
+ ![create](/Images/create_new_bot.jpg) 
 
  5. Name your bot that should display in telegram list 
 
- ![created](/Remote_pi/Images/Bot_name_done_2.jpg)
+ ![created](/Images/Bot_name_done_2.jpg)
 
  6. Now you has to create the username as stated in the message 
 
- ![username](/Remote_pi/Images/Bot_done.jpg)
+ ![username](/Images/Bot_done.jpg)
 
  >Copy the HTTP API token and paste it somewhere, this token is used by node-red in coming steps 
 
