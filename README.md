@@ -12,7 +12,7 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 ### **1. Raspberry pi - Hardware** 
 >Any version of PI user can use that is having ethernet or Wifi functionality 
 
->User can also use any other linux machine rather than raspberrey pi but in this project we took Raspberrey PI only for reference. 
+>User can also use any other linux machine rather than raspberrey pi but in this project we took Raspberrey PI 5 for reference. 
 
 ### **2. Node-RED platform - Software tool**
  >Refer this [link](https://nodered.org/docs/getting-started/raspberrypi) for installing Node-red software in your PI.
@@ -100,6 +100,14 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 <img src="Images/PWD_2.jpg" alt="Alt Text" width="500" height="auto">
 <img src="Images/RemotePI_Demo.jpg" alt="Alt Text" width="500" height="auto">
 
+## Some of the Use cases
+
+### 1. if you find any new project/git repo while scrolling, clone it from the phone itself and later on explore it from the laptop
+### 2. if you forget the IP of your machine, do `ifconfig` and get the machine's IP via phone
+### 3. Check who all are using the machine remotely via phone using `w` command
+### 4. if you forget to commit your code, you can do it via phone  
+
+>### Rather than above usecases, you can make your own usecase for this Remote_PI  
 
 
 
