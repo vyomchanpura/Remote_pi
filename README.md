@@ -14,6 +14,8 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 
 >User can also use any other linux machine rather than raspberrey pi but in this project we took Raspberrey PI 5 for reference. 
 
+>PI must be connected to internet 
+
 ### **2. Node-RED platform - Software tool**
  >Refer this [link](https://nodered.org/docs/getting-started/raspberrypi) for installing Node-red software in your PI.
 
