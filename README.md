@@ -14,6 +14,8 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 
 >User can also use any other linux machine rather than raspberrey pi but in this project we took Raspberrey PI 5 for reference. 
 
+>PI must be connected to internet 
+
 ### **2. Node-RED platform - Software tool**
  >Refer this [link](https://nodered.org/docs/getting-started/raspberrypi) for installing Node-red software in your PI.
 
@@ -42,7 +44,7 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 
  >### Copy the HTTP API token and paste it somewhere, this token is used by node-red in coming steps 
 
- ## Steps to enable RemotePI using Node-RED
+ ## Steps to enable RemotePI using Node-RED in PI 
 
 ### 1. Hopefully you installed Node-RED in your PI machine by following the steps mention in this [link](https://nodered.org/docs/getting-started/raspberrypi)
 ### 2. Open PI terminal and type below command to run Node-RED software
@@ -86,15 +88,16 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 
 <img src="Images/Deploy_Project.png" alt="Alt Text" width="500" height="auto">
 
-
-
 ### ***Now the configeration is done, Good Job!!!***
+
+### Now Open your telegram app in phone and go to the chat bot that you created and type below command 
+
+`sudo systemctl enable nodered.service`
+>### This above command will run the node-red as a service means node-red application will start after system boot no need to manully run node-red again 
 
 ## Demo
 
-### 1. Open your telegram app in phone 
-### 2. Go to the chatbot that you created 
-### 3. Type any Linux command like `ls`, `mkdir`, `cat filename`, etc and you will get the response like a terminal output
+### Type any Linux command like `ls`, `mkdir`, `cat filename`, etc in the chatbot that you created in a telegram app and you will get the response like a terminal output
 ### Here is one of the example :
 
 <img src="Images/PWD_2.jpg" alt="Alt Text" width="500" height="auto">
