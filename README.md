@@ -108,10 +108,12 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 ### 1. if you find any new project/git repo while scrolling, clone it from the phone itself and later on explore it from the laptop
 ### 2. if you forget the IP of your machine, do `ifconfig` and get the machine's IP via phone
 ### 3. Check who all are using the machine remotely via phone using `w` command
-### 4. if you forget to commit your code, you can do it via phone  
 
 >### Rather than above usecases, you can make your own usecase for this Remote_PI  
 
+## Known Issues 
+  ### 1. Do not use commands like `sudo poweroff` or `sudo shutdown` or `sudo restart` it will create problem when you boot the PI again
+  ### 2. `cd` Command is not supported for this Remote_PI 
 
 
 
