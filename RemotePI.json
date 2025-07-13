@@ -1,6 +1,6 @@
 [
     {
-        "id": "5baa0e3262caa345",
+        "id": "b0dcec21bfd64fad",
         "type": "tab",
         "label": "RemotePI",
         "disabled": false,
@@ -8,28 +8,11 @@
         "env": []
     },
     {
-        "id": "74ac0399290dc6ec",
-        "type": "debug",
-        "z": "5baa0e3262caa345",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "55981ddc4422e092",
+        "id": "5244a6e9e412ebc8",
         "type": "telegram sender",
-        "z": "5baa0e3262caa345",
+        "z": "b0dcec21bfd64fad",
         "name": "",
-        "bot": "2586c691f2af97ec",
+        "bot": "",
         "haserroroutput": false,
         "outputs": 1,
         "x": 1130,
@@ -39,29 +22,9 @@
         ]
     },
     {
-        "id": "d4756c422215bd3d",
+        "id": "e9caa44c770909f6",
         "type": "function",
-        "z": "5baa0e3262caa345",
-        "name": "Taking_commands_telegram",
-        "func": "var data=msg.payload.content;\nvar msg={\n    payload:data\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 300,
-        "wires": [
-            [
-                "7d048a7f4af8611a"
-            ]
-        ]
-    },
-    {
-        "id": "570ffd6ce9be1b04",
-        "type": "function",
-        "z": "5baa0e3262caa345",
+        "z": "b0dcec21bfd64fad",
         "name": "take_payload_from_terminal_output",
         "func": "var data=msg.payload;\nvar machine_info={\n    payload:{\n        chatId: \"6464678817\",\n        type: \"message\",\n        content: data\n    }\n}\nreturn machine_info;",
         "outputs": 1,
@@ -74,15 +37,14 @@
         "y": 240,
         "wires": [
             [
-                "74ac0399290dc6ec",
-                "55981ddc4422e092"
+                "5244a6e9e412ebc8"
             ]
         ]
     },
     {
-        "id": "7d048a7f4af8611a",
+        "id": "d9ba4787d741caf5",
         "type": "exec",
-        "z": "5baa0e3262caa345",
+        "z": "b0dcec21bfd64fad",
         "command": "",
         "addpay": "payload",
         "append": "",
@@ -95,16 +57,16 @@
         "y": 200,
         "wires": [
             [
-                "570ffd6ce9be1b04"
+                "e9caa44c770909f6"
             ],
             [],
             []
         ]
     },
     {
-        "id": "dd28d9f0dbc8839b",
+        "id": "a608aefbc364ddeb",
         "type": "comment",
-        "z": "5baa0e3262caa345",
+        "z": "b0dcec21bfd64fad",
         "name": "Sending commands to pi",
         "info": "",
         "x": 630,
@@ -112,47 +74,40 @@
         "wires": []
     },
     {
-        "id": "97302092a5efcf02",
+        "id": "9025b21bf57cb8e9",
         "type": "telegram receiver",
-        "z": "5baa0e3262caa345",
+        "z": "b0dcec21bfd64fad",
         "name": "",
-        "bot": "2586c691f2af97ec",
+        "bot": "",
         "saveDataDir": "",
         "filterCommands": false,
         "x": 210,
         "y": 120,
         "wires": [
             [
-                "d4756c422215bd3d"
+                "b1e6ce02a51a6679"
             ],
             []
         ]
     },
     {
-        "id": "2586c691f2af97ec",
-        "type": "telegram bot",
-        "botname": "",
-        "usernames": "",
-        "chatids": "",
-        "baseapiurl": "",
-        "testenvironment": false,
-        "updatemode": "polling",
-        "pollinterval": "9000",
-        "usesocks": false,
-        "sockshost": "",
-        "socksprotocol": "socks5",
-        "socksport": 6667,
-        "socksusername": "anonymous",
-        "sockspassword": "",
-        "bothost": "",
-        "botpath": "",
-        "localbothost": "0.0.0.0",
-        "localbotport": 8443,
-        "publicbotport": 8443,
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "sslterminated": false,
-        "verboselogging": false
+        "id": "b1e6ce02a51a6679",
+        "type": "function",
+        "z": "b0dcec21bfd64fad",
+        "name": "Taking_commands_telegram",
+        "func": "var data=msg.payload.content;\nvar j=0;\nmsg = {\n    payload: data\n};\nfunction delay(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\nif (data=='sudo poweroff'){\nawait delay(10000);\nreturn msg;\n}\nelse{\nreturn msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "d9ba4787d741caf5"
+            ]
+        ]
     }
 ]
