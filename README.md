@@ -112,8 +112,7 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 >### Rather than above usecases, you can make your own usecase for this Remote_PI  
 
 ## Known Issues 
-  ### 1. Do not use commands like `sudo poweroff` or `sudo shutdown` or `sudo restart` it will create problem when you boot the PI again
-  ### 2. `cd` Command is not supported for this Remote_PI 
+  ### 1. `cd` Command is not supported for this Remote_PI 
 
 
 
