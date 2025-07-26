@@ -79,7 +79,7 @@ Means your phone's messaging app is your pi terminal, you can list the directory
 
 <img src="Images/Flow_RemotePI.png" alt="Alt Text" width="500" height="auto">
 
-### 8. Open Telegram node (any revicer or sender) by double clicking on the node --> go to the edit --> add your telegram token and bot name that we generated in pervious section, then click update and Done to save it 
+### 8. Open Telegram node (any revicer or sender) by double clicking on the node --> go to the edit --> add your telegram token and bot name that we generated in pervious [section](https://github.com/vyomchanpura/Remote_pi?tab=readme-ov-file#6-now-you-has-to-create-the-username-as-stated-in-the-message), then click update and Done to save it 
 
   <img src="Images/Edit_Token_1.png" alt="Alt Text" width="500" height="auto">
   <img src="Images/Update_Token_name.png" alt="Alt Text" width="500" height="auto">
